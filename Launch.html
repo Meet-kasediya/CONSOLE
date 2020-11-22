@@ -1,0 +1,225 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>LAUNCH</title>
+  <link rel="stylesheet" type="text/css" href="shades.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <center>
+<div id="container">
+  <div id="inner">
+	<div class="triggers">
+ 
+
+</div><br> <br><br><br><br> 
+
+<div class="psp_out"> 
+	<div class="psp_body">  
+   	<div class="psp_in"><button accesskey="q" class="l">L</button><button accesskey="w" class="r">R</button>  
+
+
+<div id="Block"> 
+	<div id="Block_1" class="Block"></div>
+	<div id="Block_2" class="Block"></div>
+	<div id="Block_3" class="Block"></div> 
+	<div id="Block_4" class="Block"></div>
+	<div id="Block_5" class="Block"></div>
+	<div id="Block_6" class="Block"></div>
+	<div id="Block_7" class="Block"></div>
+	<div id="Block_8" class="Block"></div>
+</div>
+<span id="iso" style="font-family: 'Oswald', sans-serif; letter-spacing: 1px;">Loading...</span>
+
+<!-- <span class="return">🔘</span> -->
+ 
+<div class="shapes">
+
+    <button accesskey="p" class="border">△</button>
+    
+    <table>
+        <tr>
+            <th><button accesskey="o" class="sq border">☐</button>
+            </th>
+            <th>
+            <button accesskey="l"  class="border">〇</button>
+            </th>
+        </tr>
+    </table>
+    
+    <button accesskey="k" class="border">X</button>
+    </div>
+    
+                <div class="directions">
+                    
+    <button accesskey="d">⬆️</button>
+    
+    <table>
+        <tr>
+            <th><button accesskey="s" class="sq">⬅️</button>
+            </th>
+            <th>
+            <button accesskey="x">➡️</button>
+            </th>
+        </tr>
+    </table>
+    
+    <button accesskey="z">⬇️</button>
+    </div>
+    
+    
+    <div class="center_controls">
+        
+    <table><tr><th><button accesskey="f" class="size right">⊳</button></th><th><button class="size right" accesskey="g" onclick="msg1()">SELECT</button></th><th><button class="size" accesskey="h" onclick="msg2()">START</button></th></tr></table>
+    
+    </div>
+    
+     
+
+</div> . . .<span class="c"> CONSOLE </span>. . . 
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+</center>
+
+	    	
+<br><br><br><br>
+
+
+<!-- well this one is a work-in-progress -->
+
+
+<!-- <a href="launch2.htm"><button disabled class="btn">Switch psp</button></a> -->
+
+
+
+ 
+
+
+<br><br><br><br><br><br><br><br>
+
+<center><a href="https://github.com/Meet-kasediya" target="_blank"><img src="auth.png" ></a></center>
+
+</div></div>
+ 
+<script type="text/javascript">
+(function() {
+ 
+  var container = document.getElementById("container"),
+      inner = document.getElementById("inner");
+
+ 
+  var mouse = {
+    _x: 0,
+    _y: 0,
+    x: 0,
+    y: 0,
+    updatePosition: function(event) {
+      var e = event || window.event;
+      this.x = e.clientX - this._x;
+      this.y = (e.clientY - this._y) * -1;
+    },
+    setOrigin: function(e) {
+      this._x = e.offsetLeft + Math.floor(e.offsetWidth / 2);
+      this._y = e.offsetTop + Math.floor(e.offsetHeight / 2);
+    },
+    show: function() {
+      return "(" + this.x + ", " + this.y + ")";
+    }
+  };
+
+ 
+  mouse.setOrigin(container);
+
+   
+  var counter = 0;
+  var refreshRate = 10;
+  var isTimeToUpdate = function() {
+    return counter++ % refreshRate === 0;
+  };
+
+ 
+  var onMouseEnterHandler = function(event) {
+    update(event);
+  };
+
+  var onMouseLeaveHandler = function() {
+    inner.style = "";
+  };
+
+  var onMouseMoveHandler = function(event) {
+    if (isTimeToUpdate()) {
+      update(event);
+    }
+  };
+
+ 
+  var update = function(event) {
+    mouse.updatePosition(event);
+    updateTransformStyle(
+      (mouse.y / inner.offsetHeight / 2).toFixed(2),
+      (mouse.x / inner.offsetWidth / 2).toFixed(2)
+    );
+  };
+
+  var updateTransformStyle = function(x, y) {
+    var style = "rotateX(" + x + "deg) rotateY(" + y + "deg)";
+    inner.style.transform = style;
+    inner.style.webkitTransform = style;
+    inner.style.mozTranform = style;
+    inner.style.msTransform = style;
+    inner.style.oTransform = style;
+  };
+
+ 
+  container.onmousemove = onMouseMoveHandler;
+  container.onmouseleave = onMouseLeaveHandler;
+  container.onmouseenter = onMouseEnterHandler;
+})();
+
+
+
+
+</script>
+
+ <script>
+
+function msg1(){
+
+
+  document.getElementById("iso").innerHTML = 'Directory is empty!';
+}
+function msg2(){
+
+
+document.getElementById("iso").innerHTML = 'No ISO detected.';
+}
+
+
+
+
+ </script>
+ <a href="gd.html"><img src="manual.png" class="man"></a>
+
+ 
+</body>
+</html>
