@@ -8,6 +8,7 @@ button{
     padding:5px;
     border:1px #415961 solid;
     cursor: pointer;
+    opacity: 0.67;
   }
   
   /*body{background-color: #1b1b1b}*/
@@ -67,7 +68,7 @@ button{
   
                
                width: 770px;
-               height: 3o0px;
+               height: 315px;
                border-radius: 20%;
                background-color: #b33333;
                margin-bottom: -146px;
@@ -139,11 +140,14 @@ button{
       animation: fadein 2.0s, fadeout 2.0s 4.0s;
   }
    
+  .lftbtn{margin-right: 20px; border-radius: 4px 0 0 4px;}
+  .rtbtn{ border-radius: 0 4px 4px 0;}
+  .upbtn{border-radius:4px 4px 0 0;}
+  .dwbtn{border-radius:0 0 4px 4px;}
   
-  .sq{margin-right: 20px;}
   .border{border-radius: 5px;}
   .center_controls{margin-top:-23px;}
-  .size{padding:2px;}
+  .size{padding:2px; border-radius: 3px;}
   .right{margin-right: 12px}
   .block{background-color:gray;}
   p{font-size: 45px;color: silver;}
@@ -372,6 +376,7 @@ button{
   }
    */ 
   @-webkit-keyframes fadein {
+  
     from { opacity: 0;}
     to {  opacity: 1;}
   }
@@ -379,7 +384,6 @@ button{
   @keyframes fadein {
     from { opacity: 0;}
     to {  opacity: 1;}
-  }
   }
   
   @-webkit-keyframes fadeout {
