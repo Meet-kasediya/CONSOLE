@@ -7,3 +7,5 @@ Recreating a playing console (css_js)
 </details> 
 
 - <a href="https://codepen.io/Meet_kasediya/pen/yLaYpvP">DEMO</a> - (Codepen)
+- Scan To Download [Zip]<br>
+- <img src='https://github.com/Meet-kasediya/CONSOLE/blob/master/qrcode_github.com.png' alt="https://github.com/Meet-kasediya/CONSOLE/blob/master/qrcode_github.com.png" height='100' width='105'>
